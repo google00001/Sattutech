@@ -1,0 +1,1195 @@
+<html lang="en">      
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brainstorm Classes</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+  }
+
+  .fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .menu-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .slider-container {
+    position: relative;
+    width: 100%;
+    margin-top: 50px; /* Adjust top margin as needed */
+    margin-bottom: 50px; /* Adjust bottom margin as needed */
+    overflow: hidden;
+  }
+
+  .slide {
+    display: none;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+
+  .dots {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .active {
+    background-color: #333;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    z-index: 1;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1><font color=Yellow><strong>BRAINSTORM CLASSES .....</strong></h1></font><br>
+   <div class="menu-icon" onclick="openFullscreenMenu()">☰</div>
+</div>
+<br>
+<marquee bgcolor=pink><font color=red><b>Session 2025-26 All Classes Registration Started -(<a href="https://docs.google.com/forms/d/e/1FAIpQLSfTh7WLKCbIcH5EMrMZYuCBwfh-3ViR8DWC6ZxR83Ef_Okhlg/viewform?usp=header">Apply Now</a> )</b></marquee><br></br>
+<marquee bgcolor=orange><font color=red><b>Apply For teaching at Brainstorm Classes for batch 2025-26- (<a href="https://docs.google.com/forms/d/e/1FAIpQLSeUVcyxXrVEFWiNjPDsWaNS747PNJIZbH8etINN0kHEeyRzZQ/viewform?usp=sf_link">Apply Now</a>)<img src="https://sarkariresult.com.cm/wp-content/uploads/2024/10/live-gif.webp"width="15%"></b></marquee>
+<div class="fullscreen-menu" id="fullscreenMenu">
+  <div class="menu-content">
+    <span class="close-btn" onclick="closeFullscreenMenu()">Close</span>
+    <center><h2><font color="red"><strong>Dialogue Box</strong></h2></font></center>
+    <ul>
+      <li><b><font color="red">Fee Structure</b>:</font>&nbsp;<a href="https://drive.google.com/file/d/1RX5uefeW_bQMso_i3kFVKbWYEv4VnTx0/view?usp=drivesdk">Foundation Fee Structure</a></li><br></br>
+      <li><b><font color="red">Terms & Condition</b>:</font> &nbsp;<a href="https://ssybrand.github.io/Bs-privacy-policy-/">View </a></li><br></br>
+      <li><b><font color="red">Teaching Job</b>:</font>&nbsp;<b>Apply for Teaching </b>&nbsp;&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSeUVcyxXrVEFWiNjPDsWaNS747PNJIZbH8etINN0kHEeyRzZQ/viewform?usp=sf_link">Apply for teaching 2025-26</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+function openFullscreenMenu() {
+  document.getElementById("fullscreenMenu").style.display = "flex";
+}
+
+function closeFullscreenMenu() {
+  document.getElementById("fullscreenMenu").style.display = "none";
+}
+</script>
+
+<div class="slider-container">
+  <div class="slide">
+    <img src="https://i.ibb.co/LPf9cGZ/Screenshot-20240517-105515-1-removebg-preview-1.png" alt="Slide 1">
+  </div>
+  <div class="slide">
+    <img src="https://i.ibb.co/TrvdCzq/IMG-20240516-WA0023-removebg-preview.png" alt="Slide 2">
+  </div>
+  <div class="slide">
+    <img src="https://i.ibb.co/h249Pvc/IMG-20240516-WA0024-removebg-preview-1-removebg-preview.png" alt="Slide 3">
+  </div>
+
+  <!-- Left and right arrows -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let i;
+  const slides = document.getElementsByClassName("slide");
+  const dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+</script>
+<br></br>
+<center><br><img src="https://see.fontimg.com/api/rf5/4VwY/ZWY4NmZlYTQwMDg2NGIyNjliNGEyNDFiN2Q4N2I4NmYudHRm/VHVybmluZyBEcmVhbXMgaW50byBBY2hpZXZlbWVudHMgIQ/youth-touch-demo-regular.png?r=fs&h=130&w=2000&fg=B81F2E&bg=BABABA&tb=1&s=65"width="75%">
+  <img src="https://i.ibb.co/NnxF5PG/Screenshot-20240517-075656-2-removebg-preview.png" width="95%">
+</center>
+<br></br>
+<center>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        /* Your existing styles here */
+
+        /* Blink button styles */
+        .trial-button {
+            background: linear-gradient(45deg, #ff6b6b, #f8e71c, #50bfff);
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+            animation: blink 1s infinite;
+            position: relative;
+            z-index: 1; /* Ensure it's above other content if overlapping */
+        }
+
+        .trial-button:hover {
+            background: linear-gradient(45deg, #f8e71c, #50bfff, #ff6b6b);
+        }
+
+        /* Preloader styles */
+        .preloader {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 10; /* Ensure it covers the entire screen */
+        }
+
+        .spinner {
+            border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 8px solid #3498db;
+            width: 60px;
+            height: 60px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing content here -->
+
+    <!-- Trial button placed appropriately within your content -->
+    <div class="container">
+        <button class="trial-button" onclick="startPreloader()">Get Free Trial</button>
+    </div>
+
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <script>
+        function startPreloader() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.display = 'flex';
+            
+            setTimeout(() => {
+                window.location.href = 'https://ssybrand.github.io/Free-trial/'; // Replace with your backend link
+            }, 5000);
+        }
+    </script>
+</body>
+
+</center>
+<br></br>
+<center>
+  <style> 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        
+        .
+        .main-content {
+            text-align: center;
+        }
+        
+        
+        .stories {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #e0f7fa;
+        }
+        .story img {
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+        }
+        .tools {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .tool {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px  rgba(0,0,0,0.1);
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+        .tool:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.05);
+        }
+        .tool img {
+            max-width: 50px;
+            margin-bottom: 10px;
+        }
+        .tool h4 {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+    </style>
+   
+    <hr color=aqua>
+<center><img src="https://see.fontimg.com/api/rf5/9Y2DK/N2YzOWQ5NTNjNzdhNDYwMTk1NTdhYmMwNmJiYzZjYjUudHRm/U3R1ZGVudHMgRGFzaGJvYXJkIA/nature-beauty-personal-use.png?r=fs&h=130&w=2000&fg=F92020&bg=FFFFFF&tb=1&s=65"width="80%"></center>
+    <hr color=aqua>
+    <div class="tools">
+       <div class="tool" onclick="window.location.href='https://bpg.ct.ws/'">
+            <img src="https://cdn-icons-png.flaticon.com/128/4375/4375408.png" alt="Attendance Icon">
+            <h4>Pay Fee</h4>
+        </div>
+        <div class="tool" onclick="window.location.href='https://ssybrand.github.io/Our-results-/'">
+            <img src="https://cdn-icons-png.flaticon.com/128/14/14265.png" alt="Homework Icon">
+            <h4>Results</h4>
+        </div>
+        <div class="tool" onclick="window.location.href='https://sattu6560.github.io/Live-class-/'">
+            <img src="https://cdn-icons-png.flaticon.com/128/10455/10455313.png" alt="Book List Icon">
+            <h4>Live Class</h4>
+        </div>
+        <div class="tool" onclick="window.location.href='https://chat.whatsapp.com/JI5oUZsXpOYHKB7yM3C4z1'">
+            <img src="https://cdn-icons-png.flaticon.com/128/7655/7655679.png" alt="Syllabus Icon">
+            <h4>Announcement</h4>
+        </div>
+
+    </div>
+    <hr color=Black size=5>
+</center>
+<br></br>
+<div class="batch">
+    <center><img src="https://see.fontimg.com/api/rf5/yY4RM/M2VmZTg5OTQ3ZWMxNGYxMDg0ZTYzZjBhYmM0MjJmY2Yub3Rm/VXBjb21pbmcgQmF0Y2hlcyAyMDI1LTI2/black-rolmer-oblique.png?r=fs&h=130&w=2000&fg=251172&bg=BABABA&tb=1&s=65"width="80%"></center>
+<!-- Batch Registration Section Start -->
+<div class="custom-batch-section">
+    <div class="custom-live-badge">Offline Batch</div>
+    <div class="custom-banner">
+        <img src="https://i.ibb.co/tpg5mrK9/sir-intro.jpg" alt="Batch Banner">
+    </div>
+    <div class="custom-batch-details">
+        <p><strong>Batch Details:</strong> Targeting CUET UG  2025 | Starting from 1 April 2025</p>
+        <p><strong>Subject:</strong> Reasoning, Logical and Analytical Reasoning. </p>
+        <p><strong>Duration:</strong> 1 Months</p>
+        <p><strong>Cost:</strong> <del>₹1599</del> <span class="custom-discount-price">₹1000</span></p>
+    </div>
+    <div class="custom-register-btn">
+        <button onclick="customRegisterNow()">Register Now</button>
+    </div>
+</div>
+
+<style>
+.custom-batch-section {
+    background-color: white;
+    border: 2px solid #007BFF;
+    padding: 10px;
+    width: 80%;
+    max-width: 320px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-live-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 3px;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.custom-banner img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #007BFF;
+}
+
+.custom-batch-details {
+    margin: 10px 0;
+    text-align: left;
+    font-size: 14px;
+}
+
+.custom-batch-details del {
+    color: grey;
+    font-size: 13px;
+}
+
+.custom-discount-price {
+    color: green;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.custom-register-btn button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.custom-register-btn button:hover {
+    background-color: #0056b3;
+}
+</style>
+
+<script>
+function customRegisterNow() {
+    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSeg2ZLV3I4RprimSyzYYOntBDtcwqFzhqsGz2h5pwi2Wr8NIg/viewform?usp=header"; // Replace with your actual registration link
+}
+</script>
+<!-- Batch Registration Section End -->
+<br></br>
+<!-- Batch Registration Section Start -->  
+<div class="custom-batch-section">
+    <div class="custom-live-badge">Offline Batch</div>
+    <div class="custom-banner">
+        <img src="https://i.ibb.co/8GCxhG8/9th.jpg" alt="Batch Banner">
+    </div>
+    <div class="custom-batch-details">
+        <p><strong>Batch Details:</strong> Targeting Class 9th for session  2025 | Starting from 15 April 2025</p>
+        <p><strong>Subject:</strong> Science, Math, SST , English  </p>
+        <p><strong>Duration:</strong> 1 Year</p>
+        <p><strong>Cost:</strong> <del>₹1599</del> <span class="custom-discount-price">₹1300/month</span></p>
+    </div>
+    <div class="custom-register-btn">
+        <button onclick="customRegisterNow()">Register Now</button>
+    </div>
+</div>
+
+<style>
+.custom-batch-section {
+    background-color: white;
+    border: 2px solid #007BFF;
+    padding: 10px;
+    width: 80%;
+    max-width: 320px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-live-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 3px;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.custom-banner img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #007BFF;
+}
+
+.custom-batch-details {
+    margin: 10px 0;
+    text-align: left;
+    font-size: 14px;
+}
+
+.custom-batch-details del {
+    color: grey;
+    font-size: 13px;
+}
+
+.custom-discount-price {
+    color: green;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.custom-register-btn button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.custom-register-btn button:hover {
+    background-color: #0056b3;
+}
+</style>
+
+<script>
+function customRegisterNow() {
+    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSeg2ZLV3I4RprimSyzYYOntBDtcwqFzhqsGz2h5pwi2Wr8NIg/viewform?usp=header"; // Replace with your actual registration link
+}
+</script>
+<!-- Batch Registration Section End -->
+<br></br>
+<!-- Batch Registration Section Start -->
+<div class="custom-batch-section">
+    <div class="custom-live-badge">Offline Batch</div>
+    <div class="custom-banner">
+        <img src="https://i.ibb.co/5x807hKs/udaan.jpg" alt="Batch Banner">
+    </div>
+    <div class="custom-batch-details">
+        <p><strong>Batch Details:</strong> Targeting CBSE BOARD Class 10 2025-26 Complete Batch| Starting from 1 April 2025</p>
+        <p><strong>Subject:</strong> Math, Science, Social Science, English </p>
+        <p><strong>Duration:</strong> Till Board Exam 2025-26</p>
+        <p><strong>Cost:</strong> <del>₹1999</del> <span class="custom-discount-price">₹1500/month</span></p>
+    </div>
+    <div class="custom-register-btn">
+        <button onclick="customRegisterNow()">Register Now</button>
+    </div>
+</div>
+
+<style>
+.custom-batch-section {
+    background-color: white;
+    border: 2px solid #007BFF;
+    padding: 10px;
+    width: 80%;
+    max-width: 320px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-live-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 3px;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.custom-banner img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #007BFF;
+}
+
+.custom-batch-details {
+    margin: 10px 0;
+    text-align: left;
+    font-size: 14px;
+}
+
+.custom-batch-details del {
+    color: grey;
+    font-size: 13px;
+}
+
+.custom-discount-price {
+    color: green;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.custom-register-btn button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.custom-register-btn button:hover {
+    background-color: #0056b3;
+}
+</style>
+
+<script>
+function customRegisterNow() {
+    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfTh7WLKCbIcH5EMrMZYuCBwfh-3ViR8DWC6ZxR83Ef_Okhlg/viewform?usp=header"; // Replace with your actual registration link
+}
+</script>
+<!-- Batch Registration Section End -->
+<br></br>
+<!-- Batch Registration Section Start -->     
+<div class="custom-batch-section">
+    <div class="custom-live-badge">Offline Batch</div>
+    <div class="custom-banner">
+        <img src="https://i.ibb.co/sdQtDcZ5/11th.jpg" alt="Batch Banner">
+    </div>
+    <div class="custom-batch-details">
+        <p><strong>Batch Details:</strong> Targeting Class 11th for session  2025 | Starting from 15 April 2025</p>
+        <p><strong>Subject:</strong> Physics, Chemistry, Math,, Biology,English  </p>
+        <p><strong>Duration:</strong> 1 Year</p>
+        <p><strong>Cost:</strong> <del>₹2499</del> <span class="custom-discount-price">₹2000/month</span></p>
+    </div>
+    <div class="custom-register-btn">
+        <button onclick="customRegisterNow()">Register Now</button>
+    </div>
+</div>
+
+<style>
+.custom-batch-section {
+    background-color: white;
+    border: 2px solid #007BFF;
+    padding: 10px;
+    width: 80%;
+    max-width: 320px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-live-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 3px;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.custom-banner img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #007BFF;
+}
+
+.custom-batch-details {
+    margin: 10px 0;
+    text-align: left;
+    font-size: 14px;
+}
+
+.custom-batch-details del {
+    color: grey;
+    font-size: 13px;
+}
+
+.custom-discount-price {
+    color: green;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.custom-register-btn button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.custom-register-btn button:hover {
+    background-color: #0056b3;
+}
+</style>
+
+<script>
+function customRegisterNow() {
+    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSeg2ZLV3I4RprimSyzYYOntBDtcwqFzhqsGz2h5pwi2Wr8NIg/viewform?usp=header"; // Replace with your actual registration link
+}
+</script>
+<!-- Batch Registration Section End -->
+<br></br>
+<!-- Batch Registration Section Start -->
+<div class="custom-batch-section">
+    <div class="custom-live-badge">Offline Batch</div>
+    <div class="custom-banner">
+        <img src="https://i.ibb.co/8nGwqxy9/12th-batch.jpg" alt="Batch Banner">
+    </div>
+    <div class="custom-batch-details">
+        <p><strong>Batch Details:</strong> Targeting Class 12th  2025 CBSE Board for (Medical & Non- Medical students) | Starting from 15 April 2025</p>
+        <p><strong>Subject:</strong> Physics, Chemistry, Maths , Biology , English</p>
+        <p><strong>Duration:</strong> Till Board Exam 2025-26</p>
+        <p><strong>Cost:</strong> <del>₹2499</del> <span class="custom-discount-price">₹2000/month</span></p>
+    </div>
+    <div class="custom-register-btn">
+        <button onclick="customRegisterNow()">Register Now</button>
+    </div>
+</div>
+
+<style>
+.custom-batch-section {
+    background-color: white;
+    border: 2px solid #007BFF;
+    padding: 10px;
+    width: 80%;
+    max-width: 320px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-live-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 3px;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.custom-banner img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #007BFF;
+}
+
+.custom-batch-details {
+    margin: 10px 0;
+    text-align: left;
+    font-size: 14px;
+}
+
+.custom-batch-details del {
+    color: grey;
+    font-size: 13px;
+}
+
+.custom-discount-price {
+    color: green;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.custom-register-btn button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.custom-register-btn button:hover {
+    background-color: #0056b3;
+}
+</style>
+
+<script>
+function customRegisterNow() {
+    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfTh7WLKCbIcH5EMrMZYuCBwfh-3ViR8DWC6ZxR83Ef_Okhlg/viewform"; // Replace with your actual registration link
+}
+</script>
+<!-- Batch Registration Section End -->
+
+<style>  
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .video-section {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        text-align: center;
+    }
+
+    .video-section h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background: #000;
+        border-radius: 10px;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+</head>
+<body>
+    <div class="video-section">
+        <h2>Demo Lecture Mathematics</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/QD9BkqpSgWI?si=aNrcq3zKUBojCEGz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+<br></br>
+<footer>
+    <center>
+  <div class="faculties-box">
+    <div class="blinking-text">
+      <font color="white"><strong>Managing Director </strong></font>
+    </div>
+  </div>
+</center>
+
+<style>
+  .faculties-box {
+    display: inline-block;
+    padding: 10px;
+    background-color: #2196F3;
+    border-radius: 20px;
+  }
+
+  .blinking-text {
+    animation: blink 1s infinite; /* Blinking animation */
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
+<br>
+<center>  
+<style>
+    .teacher {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .teacher img {
+        border-radius: 50%; /* Makes the image circular */
+        width: 200px; /* Adjust the size as needed */
+        height: 200px; /* Adjust the size as needed */
+        object-fit: cover; /* Ensures the image fills the circle */
+    }
+</style>
+
+<div class="container">
+    <div class="teacher">
+        <img src="https://i.ibb.co/1dFQ69G/IMG-20240516-WA0011-removebg-preview.png" alt="Teacher 1">
+        <h2>N.K Sir<br><font color=green size=3>• Managing Director & CEO Of Brainstorm Classes</font></h2>
+        <p>Teaching Subject: Math<br>• 10+&nbsp;Year teaching Experience</p>
+    </div>
+    </div>
+<br></br>
+<div id="customBanner">
+    <style>
+        #customBanner {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        #customBanner .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            width: 100%;
+        }
+
+        #customBanner .topper {
+            display: flex;
+            align-items: center;
+            background-color: #e0f7fa;
+            padding: 5px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #customBanner .topper img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        #customBanner .topper .details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #customBanner .topper .name {
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        #customBanner .topper .percentage {
+            font-size: 0.9em;
+            color: #00796b;
+        }
+    </style>
+
+    <center>
+        <img src="https://see.fontimg.com/api/renderfont4/9Y2DK/eyJyIjoiZnMiLCJoIjoxMzAsInciOjIwMDAsImZzIjo2NSwiZmdjIjoiI0U3NDU2MSIsImJnYyI6IiNGRkZGRkYiLCJ0IjoxfQ/T3VyIFRvcHBlcnMg/nature-beauty-personal-use.png" width="60%">
+   <br>
+   <font color=blue size=4><strong><i>CBSE RESULT 2024 CLASS 10th</font></i></strong>
+    </center>
+    <br></br>
+    
+    <div id="topperContainer" class="grid-container">
+        <!-- Topper entries will be injected here by JavaScript -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toppers = [
+                { name: 'Adity Pandey', percentage: '95%', logo: 'https://i.ibb.co/kH6wkgb/IMG-20240516-WA0000-removebg-preview.png' },
+                { name: 'Suman Ranjan', percentage: '95%', logo: 'https://i.ibb.co/sjmrgRB/IMG-20240516-WA0001-removebg-preview.png' },
+                { name: 'Navneet kumar', percentage: '93%', logo: 'https://i.ibb.co/nk2czSy/IMG-20240516-WA0002-removebg-preview.png' },
+                { name: 'Priyansh Yadav', percentage: '92%', logo: 'https://i.ibb.co/2cp2RLd/IMG-20240516-WA0005-removebg-preview.png' },
+                { name: 'Shwetank tripathi', percentage: '91%', logo: 'https://i.ibb.co/K0HKYmQ/IMG-20240516-WA0019-removebg-preview.png' },
+                { name: 'Rigved Mishra', percentage: '91%', logo: 'https://i.ibb.co/gt1Rz9r/IMG-20240516-WA0013-removebg-preview.png' },
+                { name: 'Yashi shukla', percentage: '90%', logo: 'https://i.ibb.co/n8V5ZxG/IMG-20240516-WA0003-removebg-preview.png' },
+                { name: 'Priyanshi Shukla', percentage: '90%', logo: 'https://i.ibb.co/4M9xsB6/IMG-20240516-WA0006-removebg-preview.png' }
+            ];
+
+            const topperContainer = document.getElementById('topperContainer');
+
+            toppers.forEach(topper => {
+                const topperDiv = document.createElement('div');
+                topperDiv.classList.add('topper');
+
+                topperDiv.innerHTML = `
+                    <img src="${topper.logo}" alt="${topper.name}">
+                    <div class="details">
+                        <div class="name">${topper.name}</div>
+                        <div class="percentage">${topper.percentage}</div>
+                    </div>
+                `;
+
+                topperContainer.appendChild(topperDiv);
+            });
+        });
+    </script>
+</div>
+
+
+    </center>
+    <br></br>
+    <center><font color="red">Urgent Note:- </b></font><br></font>
+    <font color="blue"><strong>Dear User please dont share your details accept this website and If finding any error in website just Report @t bussiones Email: ssybrand58@gmail.com.</strong></font><br>
+<br></br>
+<style>  
+/* Button styling */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color:  #FF0000; /* red */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Hover effect */
+.button:hover {
+  background-color: #FF0000;
+}
+
+/* Pressed effect */
+.button:active {
+  background-color: #FF0000;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Button with onclick event to open a new page -->
+<button class="button" onclick="openReportPage()">Support/Help</button>
+
+<script>
+// Function to open a new page when button is clicked
+function openReportPage() {
+  window.open("tel:917860571397", "_blank");
+}
+</script>
+<br></br>
+    <br></br>
+    <center><br>
+      <img src="https://i.ibb.co/vzTTDX2/Screenshot-20240517-075612-2-removebg-preview.png"width="93%"></center>
+<br>
+<marquee><font color=Blue><strong><i>2025-26 के लिए नया बैच शुरू, अभी नामांकन करें और छूट पाएं ❣️</i></strong></marquee>
+<hr color=aqua size=5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer .section {
+            margin: 10px 0;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer i {
+            margin-right: 8px;
+        }
+        .footer .social-icons a {
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="section">
+            <font color=red><h3>Location</h3></font>
+            <p><i class="fas fa-map-marker-alt"></i><a href="https://maps.app.goo.gl/PtVyLxtsJcqNrzTq6">Viwe Locations on Google Map</a><br><font color=blue><b>OR</font></b><br> Address:-&nbsp;GVH3+M3R, Shantipuram, Phaphamau, Uttar Pradesh 211013</p>
+        </div>
+        <div class="section">
+            <font color=Red><h3>Contact Us</h3></font>
+            <p><i class="fas fa-phone"></i> +91 93368 70697</p>
+            <p><i class="fas fa-envelope"></i> Kishorenaval266@gmail.com</p>
+        </div>
+        <div class="section social-icons">
+            <font color=red><h3>Hosted BY Sattu Technologiee 💫</h3></font>
+         <center><font color=aqua><strong>Made with Love By SATYAM ❤️</font></strong></center>
+</div>
+    </footer>
+
+</body>
+
+    
+    </div>
+
+</body>
+</html>
